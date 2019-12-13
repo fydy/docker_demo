@@ -1,0 +1,16 @@
+{
+  "name": "adonis",
+  "public": true,
+  "type": "docker",
+  "features": {
+    "cloud": "v2"
+  },
+  "env": {
+    "NODE_ENV": "production",
+    "HOST": "0.0.0.0",
+    "PORT": "3333",
+    "APP_URL": "http://${HOST}:${PORT}",
+    "CACHE_VIEWS": "true",
+    "APP_KEY": "@adonis_app_key"
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "public": true,
+  "features": {
+    "cloud": "v2"
+  },
+  "env": {
+    "BAZ": "This env var should always be present",
+    "test": "1"
+  },
+  "build": {
+    "env": {
+      "FOO": "foo",
+      "BAR": "bar"
+    }
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "name": "node-typescript",
+  "version": "1.0.0",
+  "main": "dist/index.js",
+  "license": "MIT",
+  "scripts": {
+    "build": "tsc",
+    "start": "micro"
+  },
+  "devDependencies": {
+    "typescript": "^3.0.1"
+  },
+  "dependencies": {
+    "micro": "^9.3.3"
+  }
+}

@@ -1,0 +1,6 @@
+main.dwarf
+node_modules
+.bundle
+vendor
+target
+

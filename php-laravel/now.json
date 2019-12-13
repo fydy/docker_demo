@@ -1,0 +1,12 @@
+{
+    "public": true,
+    "type": "docker",
+    "features": {
+        "cloud": "v2"
+    },
+    "env": {
+        "APP_ENV": "production",
+        "APP_KEY": "base64:qqHXJg4hih7SGnL7ra7q3jf7T65K3KrYa4tikkhgUmw=",
+        "APP_DEBUG": "false"
+    }
+}

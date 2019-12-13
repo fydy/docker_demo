@@ -1,0 +1,13 @@
+{
+  "name": "static-vuepress",
+  "version": "1.0.0",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "dev": "vuepress dev docs",
+    "build": "vuepress build docs"
+  },
+  "dependencies": {
+    "vuepress": "^0.14.2"
+  }
+}

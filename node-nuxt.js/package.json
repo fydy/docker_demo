@@ -1,0 +1,14 @@
+{
+  "name": "next.js-ssr",
+  "version": "1.0.0",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "dev": "nuxt",
+    "build": "nuxt build",
+    "start": "nuxt start"
+  },
+  "dependencies": {
+    "nuxt": "^1.4.2"
+  }
+}

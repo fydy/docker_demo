@@ -1,0 +1,9 @@
+{
+  "type": "static",
+  "public": true,
+  "build": {
+    "env": {
+      "BUNDLER": "webpack"
+    }
+  }
+}

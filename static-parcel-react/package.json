@@ -1,0 +1,16 @@
+{
+  "name": "parcel-app",
+  "scripts": {
+    "start": "parcel index.html --port 8080 --hmr-port 8181",
+    "build": "parcel build index.html",
+    "clear-dist": "rm dist/*"
+  },
+  "dependencies": {
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-react": "^6.24.1",
+    "node-sass": "^4.9.3",
+    "parcel-bundler": "^1.9.7",
+    "react": "^16.4.2",
+    "react-dom": "^16.4.2"
+  }
+}

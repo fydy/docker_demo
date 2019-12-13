@@ -1,0 +1,7 @@
+*
+!src/
+!start.sh
+!package.json
+!yarn.lock
+!.eslintrc
+!.babelrc

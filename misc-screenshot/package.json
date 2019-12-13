@@ -1,0 +1,20 @@
+{
+  "name": "now-puppeteer",
+  "description": "Puppeteer on Now",
+  "main": "index.js",
+  "scripts": {
+    "lint": "eslint src"
+  },
+  "dependencies": {
+    "micro": "9.3.2",
+    "puppeteer": "1.1.1",
+    "url-pattern": "1.0.3"
+  },
+  "devDependencies": {
+    "eslint": "5.3.0",
+    "eslint-config-airbnb": "17.0.0",
+    "eslint-plugin-import": "2.13.0",
+    "eslint-plugin-jsx-a11y": "6.1.1",
+    "eslint-plugin-react": "7.10.0"
+  }
+}

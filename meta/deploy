@@ -1,0 +1,17 @@
+#!/bin/sh
+
+dir=${1:2}
+token=$2
+
+url=$(now $dir --token $token --team zeit --public)
+r=$?
+
+if [ $r -eq 0 ] && [ ! -z $url ]; then
+  echo "<li><a href='$url'>$dir</a></li>" >> meta/index.html
+else
+  echo "<li>Failed to deploy $dir</li>" >> meta/index.html
+fi
+
+# The rate limit for deployments is 20 per 5 mins so we sleep a tiny bit more
+# than that in case other deployments are being created concurrently
+# sleep 17 # (disabled for demo)

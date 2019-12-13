@@ -1,0 +1,9 @@
+{
+  "name": "node-micro-sse",
+  "dependencies": {
+    "micro": "9.3.1",
+    "sse-channel": "^3.1.1"
+  },
+  "license": "MIT",
+  "main": "./src/index.js"
+}

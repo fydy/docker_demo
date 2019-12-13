@@ -1,0 +1,15 @@
+<!doctype html>
+<h1>SSE Demo</h1>
+
+<pre>Connecting…</pre>
+
+<script>
+  var ev = new EventSource("/channel");
+  var pre = document.querySelector('pre');
+  ev.onmessage = function (e) {
+    pre.innerHTML = pre.innerHTML += "\n" + e.data;
+    if (pre.innerHTML.length > 10000) {
+      pre.innerHTML = "[trimmed]\n";
+    }
+  }
+</script>

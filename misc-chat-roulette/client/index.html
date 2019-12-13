@@ -1,0 +1,43 @@
+<html>
+  <body>
+    <ul class="thread">
+    </ul>
+    <br />
+    <textarea class="in"></textarea>
+    <button class="send">Send</button>
+    <script type="text/javascript">
+      const thread = document.querySelector('.thread')
+      const input = document.querySelector('.in')
+      const send = document.querySelector('.send')
+
+      const sleep = ms => new Promise(r => setTimeout(r, ms))
+      function post(msg) {
+        const li = document.createElement('li');
+        li.innerText = msg;
+        thread.appendChild(li);
+      }
+
+      let ws;
+      async function connect(delay = 2000) {
+        ;(ws && ws.close && ws.close());
+        post('Joining a new room');
+        await sleep(delay);
+        ws = new WebSocket('wss://misc-chat-roulette-server-v2.now.sh');
+        ws.addEventListener('connect', () => post('Found a room'))
+        ws.addEventListener('error', connect);
+        ws.addEventListener('close', connect);
+        ws.addEventListener('message', msg => post(msg.data));
+      }
+
+      send.addEventListener('click', () => {
+        if (ws && ws.readyState ==  1) {
+          post(`You: ${input.value}`);
+          ws.send(input.value);
+          input.value = '';
+        }
+      });
+
+      connect(0)
+    </script>
+  </body>
+</html>

@@ -1,0 +1,26 @@
+@import url("https://fonts.googleapis.com/css?family=Nunito+Sans");
+body {
+    margin: 0;
+    font-family: 'Nunito Sans';
+}
+.container {
+    margin: 0 auto;
+    max-width: 1280px;
+    width: 90%;
+}
+h1 {
+    text-align: center;
+    font-size: 4.2rem;
+    line-height: 110%;
+    margin: 2.8rem 0 1.68rem 0;
+    font-weight: 400;
+}
+a {
+    text-decoration: none;
+    color: #039be5;
+    text-decoration: none;
+    -webkit-tap-highlight-color: transparent;
+}
+@media only screen and (min-width: 700px) {
+    width: 85%;
+}

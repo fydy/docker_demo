@@ -1,0 +1,9 @@
+{
+  "type": "docker",
+  "env": {
+    "REDIRECT_URL": "https://zeit.co"
+  },
+  "features": {
+    "cloud": "v2"
+  }
+}
