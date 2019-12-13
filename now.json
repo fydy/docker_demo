@@ -1,7 +1,6 @@
 {  
-"version": 1,
+  "type": "docker",
   "features": {
-    "cloud": "v1"
-  },
-  "regions": ["all"]
+    "cloud": "v2"
+  }
 }
