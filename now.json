@@ -1,4 +1,6 @@
-  "version": 1,
+{  
+"version": 1,
   "features": {
     "cloud": "v1"
   }
+}
