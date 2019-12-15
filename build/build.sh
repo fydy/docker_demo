@@ -7,7 +7,8 @@ docker run --name now-php-build now-php-docker-image
 # Extract native files.
 rm -rf ../native
 docker cp now-php-build:/root/app/native ../
-docker cp now-php-build:/usr/lib64/php ../native/modules
+docker cp now-php-build:/usr/lib64/php ../
+cp -rf ../php ../native
 
 # Remove php build.
 docker rm -f now-php-build
