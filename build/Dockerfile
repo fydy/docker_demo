@@ -27,6 +27,6 @@ COPY ./php.ini /root/app/native/php.ini
 COPY ./php-fpm.ini /root/app/native/php-fpm.ini
 COPY ./test.php /root/app/test.php
 COPY ./test.sh /root/app/test.sh
-COPY /usr/lib64 /root/app/native/lib64
+# COPY /usr/lib64 /root/app/native/lib64
 
 CMD ["/bin/bash", "test.sh"]
