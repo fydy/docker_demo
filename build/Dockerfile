@@ -1,4 +1,4 @@
-FROM library/centos:7.x
+FROM library/centos:7.5.1804
 RUN yum -y install wget git
 RUN yum -y install epel-release
 RUN rpm -Uvh https://mirror.webtatic.com/yum/el7/webtatic-release.rpm
