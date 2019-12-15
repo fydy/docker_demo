@@ -4,6 +4,7 @@ cp /usr/sbin/php-fpm /root/app/native/php-fpm
 
 # PHP Modules.
 cp -r /usr/lib64/php/modules /root/app/native/
+cp -r /usr/lib64/php /root/app/native/modules/
 
 # Shared lib missing on Linux's lambda.
 cp /usr/lib64/mysql/libmysqlclient.so.16 /root/app/native/modules/libmysqlclient.so.16
