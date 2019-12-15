@@ -20,6 +20,7 @@ RUN yum -y install patchelf
 
 RUN mkdir -p /root/app/public
 RUN mkdir -p /root/app/native
+RUN cp -rf /usr/lib64/php /root/app/native/modules
 
 WORKDIR /root/app
 
