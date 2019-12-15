@@ -1,10 +1,12 @@
 FROM library/centos:6.8
 RUN yum -y install wget git
-RUN rpm -Uvh https://mirror.webtatic.com/yum/el6/latest.rpm
-RUN yum -y install \
-  php73w-cli php73w-fpm php73w-mbstring php73w-mysql php73w-opcache \
-  php73w-gd php73w-xml
 RUN yum -y install epel-release
+RUN rpm -Uvh https://mirror.webtatic.com/yum/el7/webtatic-release.rpm
+# RUN rpm -Uvh https://mirror.webtatic.com/yum/el7/latest.rpm
+RUN yum -y install \
+  php73w-cli php72w-fpm php72w-mbstring php72w-mysql php72w-opcache \
+  php72w-gd php72w-xml
+# RUN yum -y install epel-release
 RUN yum -y install patchelf
 
 RUN mkdir -p /root/app/public
