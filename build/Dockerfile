@@ -15,8 +15,8 @@ RUN yum -y install \
 # RUN yum -y install epel-release
 RUN yum -y install patchelf
 
-RUN wget https://github.com/phalcon/cphalcon/archive/v$PHALCON_VERSION.tar.gz && tar zxf v$PHALCON_VERSION.tar.gz
-RUN cd cphalcon-$PHALCON_VERSION/build && /usr/bin/phpize && ./configure --with-php-config=/usr/bin/php-config && ./install
+# RUN wget https://github.com/phalcon/cphalcon/archive/v$PHALCON_VERSION.tar.gz && tar zxf v$PHALCON_VERSION.tar.gz
+# RUN cd cphalcon-$PHALCON_VERSION/build && /usr/bin/phpize && ./configure --with-php-config=/usr/bin/php-config && ./install
 
 RUN mkdir -p /root/app/public
 RUN mkdir -p /root/app/native
