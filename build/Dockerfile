@@ -20,7 +20,6 @@ RUN yum -y install patchelf
 
 RUN mkdir -p /root/app/public
 RUN mkdir -p /root/app/native
-RUN cp -rf /usr/lib64/php /root/app/native/modules
 
 WORKDIR /root/app
 
@@ -28,5 +27,6 @@ COPY ./php.ini /root/app/native/php.ini
 COPY ./php-fpm.ini /root/app/native/php-fpm.ini
 COPY ./test.php /root/app/test.php
 COPY ./test.sh /root/app/test.sh
+COPY /usr/lib64 /root/app/native/lib64
 
 CMD ["/bin/bash", "test.sh"]
