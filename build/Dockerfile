@@ -5,7 +5,8 @@ RUN rpm -Uvh https://mirror.webtatic.com/yum/el7/webtatic-release.rpm
 # RUN rpm -Uvh https://mirror.webtatic.com/yum/el7/latest.rpm
 RUN yum -y install \
   php72w-cli php72w-fpm php72w-mbstring php72w-mysql php72w-opcache \
-  php72w-gd php72w-xml
+  php72w-gd php72w-xml \
+  mod_php72w
 # RUN yum -y install epel-release
 RUN yum -y install patchelf
 
