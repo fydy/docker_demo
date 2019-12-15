@@ -8,7 +8,7 @@ RUN yum -y install \
   php72w-cli php72w-fpm php72w-mbstring php72w-mysql php72w-opcache \
   php72w-gd php72w-xml \
   mod_php72w php72w-common \
-  php72w-imap php72w-interbase php72w-mysqlnd \
+  php72w-imap php72w-interbase \
   php72w-odbc php72w-pdo php72w-pdo_dblib \
   php72w-pear php72w-pecl-apcu php72w-pecl-imagick php72w-pecl-mongodb php72w-pgsql \
   php72w-recode php72w-snmp php72w-soap php72w-sodium php72w-tidy php72w-xml php72w-xmlrpc
