@@ -1,6 +1,6 @@
 FROM library/centos:7.5.1804
 ARG PHALCON_VERSION=3.4.5
-RUN yum -y install wget git
+RUN yum -y install wget git gcc make file
 RUN yum -y install epel-release
 RUN rpm -Uvh https://mirror.webtatic.com/yum/el7/webtatic-release.rpm
 # RUN rpm -Uvh https://mirror.webtatic.com/yum/el7/latest.rpm
