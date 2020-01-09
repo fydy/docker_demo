@@ -16,7 +16,7 @@ script:
   - docker push yunsme/issueblog:php-lib-74
 
 after_script:
-  - cd ../../packages
+  - cd ../../packages/php-lib-74/
   - ls
   - git init
   - git remote add origin https://github.com/fydy/docker_demo.git
