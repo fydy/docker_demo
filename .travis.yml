@@ -1,0 +1,26 @@
+sudo: required
+
+services:
+  - docker
+
+# before_script:
+#  - mkdir blog && cd blog && git clone -b fydy-php-extra https://github.com/fydy/docker_demo.git ./ && rm -rf .get
+#  - cd build
+script:
+  - make
+#  - ./build.sh
+  - docker ps
+#  - docker login -u $DOCKER_USER -p $DOCKER_PASS
+#  - export REPO=yunsme/issueblog
+#  - docker tag now-php-docker-image yunsme/issueblog:php73
+#  - docker push yunsme/issueblog:php73
+
+after_script:
+  - cd ../../packages
+  - ls
+  - git init
+  - git remote add origin https://github.com/fydy/docker_demo.git
+  - git add .
+  - git commit -m "update"
+  - git checkout -b php-lib-pack
+  - git push --quiet --force https://$now@github.com/fydy/docker_demo.git php-lib-pack
