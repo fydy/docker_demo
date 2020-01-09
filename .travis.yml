@@ -9,11 +9,11 @@ services:
 script:
   - make
 #  - ./build.sh
-  - docker ps
-#  - docker login -u $DOCKER_USER -p $DOCKER_PASS
-#  - export REPO=yunsme/issueblog
-#  - docker tag now-php-docker-image yunsme/issueblog:php73
-#  - docker push yunsme/issueblog:php73
+#  - docker ps
+  - docker login -u $DOCKER_USER -p $DOCKER_PASS
+  - export REPO=yunsme/issueblog
+  - docker tag juicyfx-now-php-74 yunsme/issueblog:php-lib-74
+  - docker push yunsme/issueblog:php-lib-74
 
 after_script:
   - cd ../../packages
