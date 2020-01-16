@@ -13,7 +13,7 @@ before_script:
   - sed -i "s/juicyfx/fydy/g" `grep juicyfx -rnl ./*`
   - pwd
   - mkdir npme && cd npme && cp -rf /home/travis/build/fydy/docker_demo/packages/php-lib-73/package.json ./ && npm i now-wordpress@0.7.70 && ls -a node_modules
-  - rm -rf packages/*
+  - cd /home/travis/build/fydy/docker_demo && rm -rf packages/*
 #  - cd build
 script:
 #  - make
