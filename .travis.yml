@@ -12,6 +12,7 @@ before_script:
 #  - mkdir blog && cd blog && git clone -b php-fpm https://github.com/fydy/docker_demo.git ./ && rm -rf .get
   - sed -i "s/juicyfx/fydy/g" `grep juicyfx -rnl ./*`
   - rm -rf packages/*
+  - pwd
 #  - cd build
 script:
 #  - make
