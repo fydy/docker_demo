@@ -42,7 +42,7 @@ script:
 #    - make test-libs
     
 after_script:
-  - cd /home/travis/build/fydy/docker_demo/packages && mkdir tmp && mv native/php/* tmp && mv native/lib/* tmp/modules && rm -rf native && mv tmp native
+  - cd /home/travis/build/fydy/docker_demo/packages/php-lib-73 && mkdir tmp && mv native/php/* tmp && mv native/lib/* tmp/modules && rm -rf native && mv tmp native
   - ls -lR
   - git init
   - git remote add origin https://github.com/fydy/docker_demo.git
