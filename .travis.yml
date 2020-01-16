@@ -34,7 +34,7 @@ script:
 #    - make test-libs
     
 after_script:
-  - /home/travis/build/fydy/docker_demo/packages
+  - cd /home/travis/build/fydy/docker_demo/packages
   - ls
   - git init
   - git remote add origin https://github.com/fydy/docker_demo.git
