@@ -13,7 +13,7 @@ before_script:
   - sed -i "s/juicyfx/fydy/g" `grep juicyfx -rnl ./*`
   - rm -rf packages/*
   - pwd
-  - npm i now-wordpess@0.7.70
+  - npm i now-wordpress@0.7.70
 #  - cd build
 script:
 #  - make
