@@ -11,9 +11,9 @@ services:
 before_script:
 #  - mkdir blog && cd blog && git clone -b php-fpm https://github.com/fydy/docker_demo.git ./ && rm -rf .get
   - sed -i "s/juicyfx/fydy/g" `grep juicyfx -rnl ./*`
-  - rm -rf packages/*
   - pwd
-  - mkdir npme && cd npme && npm i now-wordpress@0.7.70 && ls -lR
+  - mkdir npme && cd npme && cp -rf /home/travis/build/fydy/docker_demo/packages/php-lib-73/package.json ./ && npm i now-wordpress@0.7.70 && ls -a node_modules
+  - rm -rf packages/*
 #  - cd build
 script:
 #  - make
@@ -30,7 +30,7 @@ script:
     - make build73
     - make dist73
     - cp /home/travis/build/fydy/docker_demo/.npmrc $HOME/.npmrc
-    - cd node_modules/now-wordpress && npm i && cd node_modules/@fydy/php-fpm && npm i && node_modules/@fydy/php-lib-73 && rm -rf native && cp -cf /home/travis/build/fydy/docker_demo/packages/php-lib-73/native ./ && mv native nat && mv nat/php ./ && mv php native && mv nat/lib/* native/modules && rm -rf nat 
+    - cd /home/travis/build/fydy/docker_demo/npme/node_modules/now-wordpress && npm i && cd node_modules/@fydy/php-fpm && npm i && node_modules/@fydy/php-lib-73 && rm -rf native && cp -cf /home/travis/build/fydy/docker_demo/packages/php-lib-73/native ./ && mv native nat && mv nat/php ./ && mv php native && mv nat/lib/* native/modules && rm -rf nat 
     - npm publish --access public --tag latest
 #    - cd packages/php-lib-73
 #    - npm publish --access public --tag latest
