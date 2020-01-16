@@ -33,7 +33,7 @@ script:
 #    - make test-libs
     
 after_script:
-  - cd packages
+  - cd .. && cd .. && cd packages
   - ls
   - git init
   - git remote add origin https://github.com/fydy/docker_demo.git
