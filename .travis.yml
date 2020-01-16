@@ -34,7 +34,7 @@ script:
 #    - cp /home/travis/build/fydy/docker_demo/.npmrc $HOME/.npmrc
     - cd /home/travis/build/fydy/docker_demo/npme/node_modules/now-wordpress && npm i && cd node_modules/@fydy/php-fpm && npm i && cd node_modules/@fydy/php-lib-73 && rm -rf native && cp -rf /home/travis/build/fydy/docker_demo/packages/php-lib-73/native ./ && mkdir tmp && mv native/php/* tmp && mv native/lib/* tmp/modules && rm -rf native && mv tmp native && cp -rf /home/travis/build/fydy/docker_demo/pack/php-lib-74/native/lib/* native/modules
     - export NPM_TOKEN="$NPM_TOKEN" && source ~/.profile
-    - sed -i '38s/0.0.11/0.0.13/' package.json
+    - sed -i '38s/0.0.11/0.0.14/' package.json
     - cp /home/travis/build/fydy/docker_demo/.npmrc $HOME/.npmrc && ./$HOME/.npmrc
     - npm publish --access public --tag latest
 #    - cd /home/travis/build/fydy/docker_demo/npme/node_modules/now-wordpress/node_modules/@fydy/php-fpm
