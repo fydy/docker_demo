@@ -130,6 +130,12 @@ __distribution_v1:
 	docker exec ${DOCKER_CONTAINER} /bin/cat /usr/lib64/libwebp.so.5 > ${DIST_LIB_PATH}/libwebp.so.5
 	docker exec ${DOCKER_CONTAINER} /bin/cat /usr/lib64/libpng12.so.0 > ${DIST_LIB_PATH}/libpng12.so.0
 	docker exec ${DOCKER_CONTAINER} /bin/cat /usr/lib64/libicui18n.so.50 > ${DIST_LIB_PATH}/libicui18n.so.50
+	docker exec ${DOCKER_CONTAINER} /bin/cat /usr/lib64/libicuuc.so.50 > ${DIST_LIB_PATH}/libicuuc.so.50
+	docker exec ${DOCKER_CONTAINER} /bin/cat /usr/lib64/libgpg-error.so.0 > ${DIST_LIB_PATH}/libgpg-error.so.0
+	docker exec ${DOCKER_CONTAINER} /bin/cat /usr/lib64/libicudata.so.62 > ${DIST_LIB_PATH}/libicudata.so.62
+	docker exec ${DOCKER_CONTAINER} /bin/cat /usr/lib64/libicui18n.so.62 > ${DIST_LIB_PATH}/libicui18n.so.62
+	docker exec ${DOCKER_CONTAINER} /bin/cat /usr/lib64/libicuio.so.62 > ${DIST_LIB_PATH}/libicuio.so.62
+	docker exec ${DOCKER_CONTAINER} /bin/cat /usr/lib64/libicuuc.so.62 > ${DIST_LIB_PATH}/libicuuc.so.62
 	
 	# Remove temporary PHP container
 	docker rm --force ${DOCKER_CONTAINER} || true
