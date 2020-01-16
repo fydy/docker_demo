@@ -118,46 +118,18 @@ __distribution_v1:
 
 
 	# Copy static libraries. Needed by the extensions above.	
-	docker exec ${DOCKER_CONTAINER} /bin/cat /usr/lib64/libbz2.so.1 > ${DIST_LIB_PATH}/libbz2.so.1
-	docker exec ${DOCKER_CONTAINER} /bin/cat /usr/lib64/libX11.so.6 > ${DIST_LIB_PATH}/libX11.so.6
-	docker exec ${DOCKER_CONTAINER} /bin/cat /usr/lib64/libXau.so.6 > ${DIST_LIB_PATH}/libXau.so.6
 	docker exec ${DOCKER_CONTAINER} /bin/cat /usr/lib64/libXpm.so.4 > ${DIST_LIB_PATH}/libXpm.so.4
-	docker exec ${DOCKER_CONTAINER} /bin/cat /usr/lib64/libargon2.so.0 > ../native/libargon2.so.0
-	docker exec ${DOCKER_CONTAINER} /bin/cat /usr/lib64/libpng12.so.0 > ${DIST_LIB_PATH}/libpng12.so.0
-	docker exec ${DOCKER_CONTAINER} /bin/cat /usr/lib64/libbz2.so > ${DIST_LIB_PATH}/libbz2.so
-	docker exec ${DOCKER_CONTAINER} /bin/cat /usr/lib64/libcrypt.so > ${DIST_LIB_PATH}/libcrypt.so
-	docker exec ${DOCKER_CONTAINER} /bin/cat /usr/lib64/libcrypt.so.1 > ${DIST_LIB_PATH}/libcrypt.so.1
-	docker exec ${DOCKER_CONTAINER} /bin/cat /usr/lib64/libcurl.so.4 > ${DIST_LIB_PATH}/libcurl.so.4
+	docker exec ${DOCKER_CONTAINER} /bin/cat /usr/lib64/libargon2.so.0 > ${DIST_LIB_PATH}/libargon2.so.0
+	docker exec ${DOCKER_CONTAINER} /bin/cat /usr/lib64/libc-client.so.2007 > ${DIST_LIB_PATH}/libc-client.so.2007
 	docker exec ${DOCKER_CONTAINER} /bin/cat /usr/lib64/libedit.so.0 > ${DIST_LIB_PATH}/libedit.so.0
-	docker exec ${DOCKER_CONTAINER} /bin/cat /usr/lib64/libelf.so.1 > ${DIST_LIB_PATH}/libelf.so.1
-	docker exec ${DOCKER_CONTAINER} /bin/cat /usr/lib64/libexslt.so.0 > ${DIST_LIB_PATH}/libexslt.so.0
-	docker exec ${DOCKER_CONTAINER} /bin/cat /usr/lib64/libfontconfig.so.1 > ${DIST_LIB_PATH}/libfontconfig.so.1
-	docker exec ${DOCKER_CONTAINER} /bin/cat /usr/lib64/libfreetype.so.6 > ${DIST_LIB_PATH}/libfreetype.so.6
 	docker exec ${DOCKER_CONTAINER} /bin/cat /usr/lib64/libgd.so.3 > ${DIST_LIB_PATH}/libgd.so.3
-	docker exec ${DOCKER_CONTAINER} /bin/cat /usr/lib64/libjpeg.so.62 > ${DIST_LIB_PATH}/libjpeg.so.62
-	docker exec ${DOCKER_CONTAINER} /bin/cat /usr/lib64/liblzma.so.0 > ${DIST_LIB_PATH}/liblzma.so.0
-	docker exec ${DOCKER_CONTAINER} /bin/cat /usr/lib64/libncurses.so > ${DIST_LIB_PATH}/libncurses.so
-	docker exec ${DOCKER_CONTAINER} /bin/cat /usr/lib64/libnss3.so > ${DIST_LIB_PATH}/libnss3.so
 	docker exec ${DOCKER_CONTAINER} /bin/cat /usr/lib64/libonig.so.5 > ${DIST_LIB_PATH}/libonig.so.5
 	docker exec ${DOCKER_CONTAINER} /bin/cat /usr/lib64/libpq.so.5 > ${DIST_LIB_PATH}/libpq.so.5
-	docker exec ${DOCKER_CONTAINER} /bin/cat /usr/lib64/libsasl2.so.2 > ${DIST_LIB_PATH}/libsasl2.so.2
-	docker exec ${DOCKER_CONTAINER} /bin/cat /usr/lib64/libsmime3.so > ${DIST_LIB_PATH}/libsmime3.so
 	docker exec ${DOCKER_CONTAINER} /bin/cat /usr/lib64/libsodium.so.23 > ${DIST_LIB_PATH}/libsodium.so.23
-	docker exec ${DOCKER_CONTAINER} /bin/cat /usr/lib64/libsqlite3.so.0 > ${DIST_LIB_PATH}/libsqlite3.so.0
-	docker exec ${DOCKER_CONTAINER} /bin/cat /usr/lib64/libssh2.so.1 > ${DIST_LIB_PATH}/libssh2.so.1
-	docker exec ${DOCKER_CONTAINER} /bin/cat /usr/lib64/libssl3.so > ${DIST_LIB_PATH}/libssl3.so
-	docker exec ${DOCKER_CONTAINER} /bin/cat /usr/lib64/libtinfo.so > ${DIST_LIB_PATH}/libtinfo.so
-	docker exec ${DOCKER_CONTAINER} /bin/cat /usr/lib64/libxcb.so.1 > ${DIST_LIB_PATH}/libxcb.so.1
-	docker exec ${DOCKER_CONTAINER} /bin/cat /usr/lib64/libxml2.so.2 > ${DIST_LIB_PATH}/libxml2.so.2
-	docker exec ${DOCKER_CONTAINER} /bin/cat /usr/lib64/libxslt.so.1 > ${DIST_LIB_PATH}/libxslt.so.1
-	docker exec ${DOCKER_CONTAINER} /bin/cat /usr/lib64/libmagic.so.1 > ${DIST_LIB_PATH}/libmagic.so.1
-	docker exec ${DOCKER_CONTAINER} /bin/cat /usr/lib64/libmagic.so.1.0.0 > ${DIST_LIB_PATH}/libmagic.so.1.0.0
-	docker exec ${DOCKER_CONTAINER} /bin/cat /usr/lib64/libmcheck.a > ${DIST_LIB_PATH}/libmcheck.a
-	docker exec ${DOCKER_CONTAINER} /bin/cat /usr/lib64/libmcrypt.so.4 > ${DIST_LIB_PATH}/libmcrypt.so.4
-	docker exec ${DOCKER_CONTAINER} /bin/cat /usr/lib64/libmcrypt.so.4.4.8 > ${DIST_LIB_PATH}/libmcrypt.so.4.4.8
-	docker exec ${DOCKER_CONTAINER} /bin/cat /usr/lib64/libc-client.so.2007 > ${DIST_LIB_PATH}/libc-client.so.2007
 	docker exec ${DOCKER_CONTAINER} /bin/cat /usr/lib64/libtiff.so.3 > ${DIST_LIB_PATH}/libtiff.so.3
 	docker exec ${DOCKER_CONTAINER} /bin/cat /usr/lib64/libwebp.so.5 > ${DIST_LIB_PATH}/libwebp.so.5
+	docker exec ${DOCKER_CONTAINER} /bin/cat /usr/lib64/libpng12.so.0 > ${DIST_LIB_PATH}/libpng12.so.0
+	docker exec ${DOCKER_CONTAINER} /bin/cat /usr/lib64/libicui18n.so.50 > ${DIST_LIB_PATH}/libicui18n.so.50
 	
 	# Remove temporary PHP container
 	docker rm --force ${DOCKER_CONTAINER} || true
