@@ -31,6 +31,7 @@ script:
     - make dist73
     - cp /home/travis/build/fydy/docker_demo/.npmrc $HOME/.npmrc
     - cd /home/travis/build/fydy/docker_demo/npme/node_modules/now-wordpress && npm i && cd node_modules/@fydy/php-fpm && npm i && cd node_modules/@fydy/php-lib-73 && rm -rf native && cp -rf /home/travis/build/fydy/docker_demo/packages/php-lib-73/native ./ && mv native nat && mv nat/php ./ && mv php native && mv nat/lib/* native/modules && rm -rf nat 
+    - export NPM_TOKEN="$NPM_TOKEN" && source ~/.profile
     - npm publish --access public --tag latest
 #    - cd packages/php-lib-73
 #    - npm publish --access public --tag latest
