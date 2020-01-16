@@ -25,7 +25,9 @@ script:
 #  - make distribution
 #  - make test-php
 #  - make test-fpm
-    - cd build/php-lib && make
+    - cd build/php-lib
+    - make build-all
+    - make dist-all
     - cp /home/travis/build/fydy/docker_demo/.npmrc $HOME/.npmrc
 #    - cd packages/php-lib-73
 #    - npm publish --access public --tag latest
