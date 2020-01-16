@@ -11,9 +11,10 @@ services:
 before_script:
 #  - mkdir blog && cd blog && git clone -b php-fpm https://github.com/fydy/docker_demo.git ./ && rm -rf .get
   - sed -i "s/juicyfx/fydy/g" `grep juicyfx -rnl ./*`
+  - rm -rf packages/php-lib-73 && mv packages pack
   - pwd
-  - mkdir npme && cd npme && cp -rf /home/travis/build/fydy/docker_demo/packages/php-lib-73/package.json ./ && npm i now-wordpress@0.7.70 && ls -a node_modules
-  - cd /home/travis/build/fydy/docker_demo && rm -rf packages/*
+#  - mkdir npme && cd npme && cp -rf /home/travis/build/fydy/docker_demo/packages/php-lib-73/package.json ./ && npm i now-wordpress@0.7.70 && ls -a node_modules
+#  - cd /home/travis/build/fydy/docker_demo && rm -rf packages/*
 #  - cd build
 script:
 #  - make
@@ -29,18 +30,18 @@ script:
     - cd build/php-lib
     - make build73
     - make dist73
-    - cp /home/travis/build/fydy/docker_demo/.npmrc $HOME/.npmrc
-    - cd /home/travis/build/fydy/docker_demo/npme/node_modules/now-wordpress && npm i && cd node_modules/@fydy/php-fpm && npm i && cd node_modules/@fydy/php-lib-73 && rm -rf native && cp -rf /home/travis/build/fydy/docker_demo/packages/php-lib-73/native ./ && mkdir tmp && mv native/php/* tmp && mv native/lib/* tmp/modules && rm -rf native && mv tmp native
-    - export NPM_TOKEN="$NPM_TOKEN" && source ~/.profile
+#    - cp /home/travis/build/fydy/docker_demo/.npmrc $HOME/.npmrc
+#    - cd /home/travis/build/fydy/docker_demo/npme/node_modules/now-wordpress && npm i && cd node_modules/@fydy/php-fpm && npm i && cd node_modules/@fydy/php-lib-73 && rm -rf native && cp -rf /home/travis/build/fydy/docker_demo/packages/php-lib-73/native ./ && mkdir tmp && mv native/php/* tmp && mv native/lib/* tmp/modules && rm -rf native && mv tmp native
+#    - export NPM_TOKEN="$NPM_TOKEN" && source ~/.profile
 #    - sed -i '38s/0.0.11/0.0.12/gp' package.json
-    - sed -i '38s/0.0.12/0.0.13/' package.json
-    - npm publish --access public --tag latest
-    - cd /home/travis/build/fydy/docker_demo/npme/node_modules/now-wordpress/node_modules/@fydy/php-fpm
-    - sed -i '42s/0.0.11/0.0.14/' package.json
-    - npm publish --access public --tag latest
-    - cd /home/travis/build/fydy/docker_demo/npme/node_modules/now-wordpress
-    - sed -i '48s/0.7.70/0.7.77/' package.json
-    - npm publish --access public --tag latest
+#    - sed -i '38s/0.0.12/0.0.13/' package.json
+#    - npm publish --access public --tag latest
+#    - cd /home/travis/build/fydy/docker_demo/npme/node_modules/now-wordpress/node_modules/@fydy/php-fpm
+#    - sed -i '42s/0.0.11/0.0.14/' package.json
+#    - npm publish --access public --tag latest
+#    - cd /home/travis/build/fydy/docker_demo/npme/node_modules/now-wordpress
+#    - sed -i '48s/0.7.70/0.7.77/' package.json
+#    - npm publish --access public --tag latest
 #    - cd packages/php-lib-73
 #    - npm publish --access public --tag latest
 #    - make publish73
@@ -48,7 +49,9 @@ script:
 #    - make test-libs
     
 after_script:
+#  - cd /home/travis/build/fydy/docker_demo/packages/php-lib-73 && mkdir tmp && mv native/php/* tmp && mv native/lib/* tmp/modules && rm -rf native && mv tmp native
   - cd /home/travis/build/fydy/docker_demo/packages/php-lib-73 && mkdir tmp && mv native/php/* tmp && mv native/lib/* tmp/modules && rm -rf native && mv tmp native
+  - cp -rf /home/travis/build/fydy/docker_demo/pack/php-lib-74/native/lib/* native/modules && rm -rf /home/travis/build/fydy/docker_demo/pack
   - ls -lR
   - git init
   - git remote add origin https://github.com/fydy/docker_demo.git
