@@ -11,6 +11,7 @@ services:
 before_script:
 #  - mkdir blog && cd blog && git clone -b php-fpm https://github.com/fydy/docker_demo.git ./ && rm -rf .get
   - sed -i "s/juicyfx/fydy/g" `grep juicyfx -rnl ./*`
+  - rm -rf packages/*
 #  - cd build
 script:
 #  - make
@@ -32,7 +33,7 @@ script:
 #    - make test-libs
     
 after_script:
-  - ls && cd .. && cd packages
+  - cd packages
   - ls
   - git init
   - git remote add origin https://github.com/fydy/docker_demo.git
