@@ -28,10 +28,10 @@ script:
     - cd build/php-lib
     - make build73
     - make dist73
-    - cp /home/travis/build/fydy/docker_demo/.npmrc $HOME/.npmrc
+#    - cp /home/travis/build/fydy/docker_demo/.npmrc $HOME/.npmrc
 #    - cd packages/php-lib-73
 #    - npm publish --access public --tag latest
-    - make publish73
+#    - make publish73
 #    - make test-runtime
 #    - make test-libs
     
