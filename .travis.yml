@@ -1,0 +1,42 @@
+language : node_js
+
+node_js:
+ - stable
+
+sudo: required
+
+services:
+  - docker
+
+before_script:
+#  - mkdir blog && cd blog && git clone -b php-fpm https://github.com/fydy/docker_demo.git ./ && rm -rf .get
+  - sed -i "s/juicyfx/fydy/g" `grep juicyfx -rnl ./*`
+#  - cd build
+script:
+#  - make
+#  - ./build.sh
+#  - docker login -u $DOCKER_USER -p $DOCKER_PASS
+#  - export REPO=yunsme/issueblog
+#  - docker tag now-php-docker-image yunsme/issueblog:php73
+#  - docker push yunsme/issueblog:php73
+#  - make build
+#  - make distribution
+#  - make test-php
+#  - make test-fpm
+    - cd build/php-lib && make
+    - cp .npmrc $HOME/.npmrc
+#    - cd packages/php-lib-73
+#    - npm publish --access public --tag latest
+    - make publish-all
+#    - make test-runtime
+#    - make test-libs
+    
+after_script:
+  - ls && cd .. && cd packages
+  - ls
+  - git init
+  - git remote add origin https://github.com/fydy/docker_demo.git
+  - git add .
+  - git commit -m "update"
+  - git checkout -b now-php-lib
+  - git push --quiet --force https://$now@github.com/fydy/docker_demo.git now-php-lib
