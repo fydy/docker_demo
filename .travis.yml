@@ -26,18 +26,18 @@ script:
 #  - make test-php
 #  - make test-fpm
     - cd build/php-lib
-    - make build-all
-    - make dist-all
+    - make build73
+    - make dist73
     - cp /home/travis/build/fydy/docker_demo/.npmrc $HOME/.npmrc
 #    - cd packages/php-lib-73
 #    - npm publish --access public --tag latest
-    - make publish-all
+    - make publish73
 #    - make test-runtime
 #    - make test-libs
     
 after_script:
   - cd /home/travis/build/fydy/docker_demo/packages
-  - ls
+  - ls -lR
   - git init
   - git remote add origin https://github.com/fydy/docker_demo.git
   - git add .
