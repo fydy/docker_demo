@@ -88,7 +88,7 @@ docker run now-php-docker-image /bin/cat /usr/lib64/libbz2.so > ../native/module
 docker run now-php-docker-image /bin/cat /usr/lib64/libc-client.so.2007 > ../native/modules/libc-client.so.2007
 # docker run now-php-docker-image /bin/cat /usr/lib64/libcap-ng.so.0 > ../native/modules/libcap-ng.so.0
 docker run now-php-docker-image /bin/cat /usr/lib64/libcrypt.so > ../native/modules/libcrypt.so
-docker run now-php-docker-image /bin/cat /usr/lib64/libcrypt.so.1 > ../native/modules/libcrypt.so.1
+# docker run now-php-docker-image /bin/cat /usr/lib64/libcrypt.so.1 > ../native/modules/libcrypt.so.1
 docker run now-php-docker-image /bin/cat /usr/lib64/libcurl.so.4 > ../native/modules/libcurl.so.4
 # docker run now-php-docker-image /bin/cat /usr/lib64/libdw.so.1 > ../native/modules/libdw.so.1
 docker run now-php-docker-image /bin/cat /usr/lib64/libedit.so.0 > ../native/modules/libedit.so.0
@@ -142,7 +142,7 @@ docker run now-php-docker-image /bin/cat /usr/lib64/libz.so > ../native/modules/
 docker run now-php-docker-image /bin/cat /usr/lib64/libz.so > ../native/modules/libz.so
 # docker run now-php-docker-image /bin/cat /usr/lib64/libz.so.1.2.7 > ../native/modules/libz.so.1.2.7
 docker run now-php-docker-image /bin/cat /usr/lib64/libzip.so.5 > ../native/modules/libzip.so.5
-docker run now-php-docker-image /bin/cat /usr/lib64/libzip.so.5.0 > ../native/modules/libzip.so.5.0
+# docker run now-php-docker-image /bin/cat /usr/lib64/libzip.so.5.0 > ../native/modules/libzip.so.5.0
 docker run now-php-docker-image /bin/cat /usr/local/lib/libmemcachedutil.so.2 > ../native/modules/libmemcachedutil.so.2
 docker run now-php-docker-image /bin/cat /usr/local/lib/libmemcached.so > ../native/modules/libmemcached.so
 docker run now-php-docker-image /bin/cat /usr/local/lib/libmemcached.so.11 > ../native/modules/libmemcached.so.11
