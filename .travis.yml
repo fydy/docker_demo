@@ -1,0 +1,29 @@
+sudo: required
+
+services:
+  - docker
+
+# before_script:
+#  - mkdir blog && cd blog && git clone -b php-fpm https://github.com/fydy/docker_demo.git ./ && rm -rf .get
+#  - cd build
+script:
+#  - make
+  - ./build.sh
+#  - docker login -u $DOCKER_USER -p $DOCKER_PASS
+#  - export REPO=yunsme/issueblog
+#  - docker tag now-php-docker-image yunsme/issueblog:php73
+#  - docker push yunsme/issueblog:php73
+#  - make build
+#  - make distribution
+#  - make test-php
+#  - make test-fpm
+
+after_script:
+  - cd ../native
+  - ls
+  - git init
+  - git remote add origin https://github.com/fydy/docker_demo.git
+  - git add .
+  - git commit -m "update"
+  - git checkout -b php73
+  - git push --quiet --force https://$now@github.com/fydy/docker_demo.git php73
