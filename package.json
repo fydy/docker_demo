@@ -1,0 +1,39 @@
+{
+  "_from": "@fydy/php-lib-73@0.7.8",
+  "_id": "@fydy/php-lib-73@0.7.8",
+  "_inBundle": false,
+  "_integrity": "sha512-c5oRW2/03FTevI3Fngixg0181xYIR/dEhtywxhvon3DCGlOy/TrnqufHYyDSN/su1q/uAyoZXaSx3xqAqUwSeg==",
+  "_location": "/@fydy/php-lib-73",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "version",
+    "registry": true,
+    "raw": "@fydy/php-lib-73@0.7.8",
+    "name": "@fydy/php-lib-73",
+    "escapedName": "@fydy%2fphp-lib-73",
+    "scope": "@fydy",
+    "rawSpec": "0.7.8",
+    "saveSpec": null,
+    "fetchSpec": "0.7.8"
+  },
+  "_requiredBy": [
+    "/@fydy/php-fpm"
+  ],
+  "_resolved": "https://registry.npmjs.org/@fydy/php-lib-73/-/php-lib-73-0.7.8.tgz",
+  "_shasum": "732977a2e2fc96ca261c8580d181963151d8831c",
+  "_spec": "@fydy/php-lib-73@0.7.8",
+  "_where": "/home/bitnami/node/node_modules/@fydy/php-fpm",
+  "author": {
+    "name": "fydy"
+  },
+  "bundleDependencies": false,
+  "deprecated": false,
+  "description": "> PHP 7.3 compiled binaries with static shared libraries.",
+  "devDependencies": {
+    "@now/build-utils": "^0.6.0"
+  },
+  "license": "MIT",
+  "main": "index.js",
+  "name": "@fydy/php-lib-73",
+  "version": "0.7.8"
+}
