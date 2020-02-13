@@ -1,0 +1,49 @@
+{
+  "_from": "now-wordpress@0.9.9",
+  "_id": "now-wordpress@0.9.9",
+  "_inBundle": false,
+  "_integrity": "sha512-VH8D9q+yqpbcF1p3kFOFbJ55KkEC/vxR17jobFZ1EhIx69/wIwyTnsAKeaFp8/uyp6269RhTlqbQP2QPORfnFQ==",
+  "_location": "/now-wordpress",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "version",
+    "registry": true,
+    "raw": "now-wordpress@0.9.9",
+    "name": "now-wordpress",
+    "escapedName": "now-wordpress",
+    "rawSpec": "0.9.9",
+    "saveSpec": null,
+    "fetchSpec": "0.9.9"
+  },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "https://registry.npmjs.org/now-wordpress/-/now-wordpress-0.9.9.tgz",
+  "_shasum": "cd7e85a45087c949873d125dceea96fa9a75a258",
+  "_spec": "now-wordpress@0.9.9",
+  "_where": "/home/bitnami/node",
+  "author": {
+    "name": "fydy"
+  },
+  "bundleDependencies": false,
+  "dependencies": {
+    "@fydy/php-fpm": "0.7.8",
+    "@juicyfx/php-fpm": "0.0.3",
+    "node-fetch": "2.3.0",
+    "yauzl": "2.10.0"
+  },
+  "deprecated": false,
+  "description": "基于now平台搭建wordpress.",
+  "keywords": [
+    "now",
+    "wordpress"
+  ],
+  "license": "ISC",
+  "main": "index.js",
+  "name": "now-wordpress",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "version": "0.9.9"
+}
