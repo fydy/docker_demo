@@ -1,0 +1,43 @@
+{
+  "_from": "@fydy/php-fpm@0.7.8",
+  "_id": "@fydy/php-fpm@0.7.8",
+  "_inBundle": false,
+  "_integrity": "sha512-soWLEC15g8NLnyb2KnT3SuNfOuOo8L/dQPpXQWkIjqfErK6CKo3lyg2g51WhKNpLWj6n/sV8U6J2l98fno0EnQ==",
+  "_location": "/@fydy/php-fpm",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "version",
+    "registry": true,
+    "raw": "@fydy/php-fpm@0.7.8",
+    "name": "@fydy/php-fpm",
+    "escapedName": "@fydy%2fphp-fpm",
+    "scope": "@fydy",
+    "rawSpec": "0.7.8",
+    "saveSpec": null,
+    "fetchSpec": "0.7.8"
+  },
+  "_requiredBy": [
+    "/now-wordpress"
+  ],
+  "_resolved": "https://registry.npmjs.org/@fydy/php-fpm/-/php-fpm-0.7.8.tgz",
+  "_shasum": "0d31a07e7f8b0595d7013fc605600f2c55be8b31",
+  "_spec": "@fydy/php-fpm@0.7.8",
+  "_where": "/home/bitnami/node/node_modules/now-wordpress",
+  "author": {
+    "name": "fydy"
+  },
+  "bundleDependencies": false,
+  "dependencies": {
+    "@fydy/php-lib-73": "0.7.8",
+    "fastcgi-client": "0.0.1"
+  },
+  "deprecated": false,
+  "description": "",
+  "devDependencies": {
+    "@now/build-utils": "^0.6.0"
+  },
+  "license": "MIT",
+  "main": "index.js",
+  "name": "@fydy/php-fpm",
+  "version": "0.7.8"
+}
